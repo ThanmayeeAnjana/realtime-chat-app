@@ -1,0 +1,218 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI',sans-serif;
+}
+
+body{
+    background:#0f172a;
+    color:white;
+    height:100vh;
+}
+
+/* AUTH PAGE */
+
+.auth-container{
+    width:350px;
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+}
+
+.auth-container h1{
+    text-align:center;
+    margin-bottom:20px;
+}
+
+input{
+    padding:12px;
+    border:none;
+    border-radius:8px;
+}
+
+button{
+    padding:12px;
+    background:#3b82f6;
+    color:white;
+    border:none;
+    border-radius:8px;
+    cursor:pointer;
+}
+
+button:hover{
+    background:#2563eb;
+}
+
+/* CHAT PAGE */
+
+.chat-container{
+    display:flex;
+    height:100vh;
+}
+
+.sidebar{
+    width:260px;
+    background:#111827;
+    padding:20px;
+    border-right:1px solid #334155;
+    overflow:auto;
+}
+
+.sidebar h3{
+    margin-bottom:15px;
+}
+
+#usersList div{
+    padding:10px;
+    margin-bottom:8px;
+    background:#1e293b;
+    border-radius:8px;
+}
+
+.main-chat{
+    flex:1;
+    display:flex;
+    flex-direction:column;
+    padding:20px;
+}
+
+.topbar{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:15px;
+}
+
+#userEmail{
+    color:#94a3b8;
+    margin-top:4px;
+}
+
+#messages{
+    flex:1;
+    overflow-y:auto;
+    background:#1e293b;
+    padding:15px;
+    border-radius:12px;
+}
+
+.my-message{
+    background:#3b82f6;
+    padding:12px;
+    border-radius:12px;
+    margin:10px 0;
+    max-width:70%;
+    margin-left:auto;
+    word-wrap:break-word;
+}
+
+.other-message{
+    background:#334155;
+    padding:12px;
+    border-radius:12px;
+    margin:10px 0;
+    max-width:70%;
+    word-wrap:break-word;
+}
+
+.my-message small,
+.other-message small{
+    display:block;
+    margin-top:5px;
+    opacity:0.7;
+    font-size:12px;
+}
+
+#typingStatus{
+    height:25px;
+    color:#94a3b8;
+    font-style:italic;
+    padding:5px 0;
+}
+
+.send-box{
+    display:flex;
+    gap:10px;
+    margin-top:10px;
+}
+
+.send-box input{
+    flex:1;
+    background:white;
+}
+
+/* Search Box */
+
+#searchUser{
+    width:100%;
+    margin:10px 0 15px;
+    background:#1e293b;
+    color:white;
+    border:1px solid #334155;
+}
+
+/* Stats */
+
+.stats{
+    text-align:center;
+    color:#94a3b8;
+    font-size:14px;
+}
+
+.stats p{
+    margin:2px 0;
+}
+
+/* User Cards */
+
+#usersList div{
+    transition:0.2s;
+    cursor:pointer;
+}
+
+#usersList div:hover{
+    background:#334155;
+}
+
+/* Message Hover */
+
+.my-message:hover,
+.other-message:hover{
+    opacity:0.9;
+    cursor:pointer;
+}
+
+/* Scrollbars */
+
+#messages::-webkit-scrollbar,
+.sidebar::-webkit-scrollbar{
+    width:8px;
+}
+
+#messages::-webkit-scrollbar-thumb,
+.sidebar::-webkit-scrollbar-thumb{
+    background:#475569;
+    border-radius:10px;
+}
+
+/* Better Sidebar */
+
+.sidebar h3{
+    text-align:center;
+    margin-bottom:15px;
+    color:#60a5fa;
+}
+
+/* Typing Animation */
+
+#typingStatus{
+    min-height:24px;
+    color:#60a5fa;
+    font-size:14px;
+}

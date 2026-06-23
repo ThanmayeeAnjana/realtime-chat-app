@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Realtime Chat</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="chat-container">
+
+    <div class="sidebar">
+
+        <h3>🟢 Online Users</h3>
+
+        <input
+            type="text"
+            id="searchUser"
+            placeholder="Search user..."
+        >
+
+        <div id="usersList"></div>
+
+    </div>
+
+    <div class="main-chat">
+
+        <div class="topbar">
+
+            <div>
+                <h2 id="chatTitle">💬 Global Chat Room</h2>
+                <p id="chatDescription">
+                     Real-time messaging powered by Firebase
+                </p>
+                <p id="userEmail"></p>
+            </div>
+
+            <div class="stats">
+
+                <p id="onlineCount">
+                    Online: 0
+                </p>
+
+                <p id="messageCount">
+                    Messages: 0
+                </p>
+
+            </div>
+
+            <button id="logoutBtn">
+                Logout
+            </button>
+
+        </div>
+
+        <div id="messages"></div>
+
+        <p id="typingStatus"></p>
+
+        <div class="send-box">
+
+            <input
+                type="text"
+                id="messageInput"
+                placeholder="Type a message..."
+            >
+
+            <button id="sendBtn">
+                Send
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+<script type="module" src="chat.js"></script>
+
+</body>
+</html>
